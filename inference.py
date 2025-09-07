@@ -42,7 +42,7 @@ def get_preds_and_probs(
         # Predict the probability
         logger.info("Predicting probabilites")
         prob = model.predict_proba(xnew).round(4)
-        prob_df = pd.DataFrame(prob, columns=[model.classes_])
+        prob_df = pd.DataFrame(prob, columns = model.classes_)
         logger.info(f"Probabilites calculated successfully :\n{prob_df}")
         return pred, prob_df
     except Exception as e:
